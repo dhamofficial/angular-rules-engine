@@ -12,7 +12,6 @@ var ServiceContext = (function () {
          * specified service request.
          */
         this.Messages = new Array();
-        this.ErrorMessages = new Array();
     }
     /**
      * Use this method to add a new message to the [ServiceContext].
@@ -25,8 +24,8 @@ var ServiceContext = (function () {
      */
     ServiceContext.prototype.hasErrors = function () {
         if (this.Messages && this.Messages.length > 0) {
-            this.ErrorMessages = this.Messages.filter(function (f) { return f.MessageType === index_1.MessageType.Error; });
-            if (this.ErrorMessages.length > 0) {
+            var errorMessages = this.Messages.filter(function (f) { return f.MessageType === index_1.MessageType.Error; });
+            if (errorMessages.length > 0) {
                 return true;
             }
         }
@@ -37,8 +36,8 @@ var ServiceContext = (function () {
      */
     ServiceContext.prototype.isGood = function () {
         if (this.Messages && this.Messages.length > 0) {
-            this.ErrorMessages = this.Messages.filter(function (f) { return f.MessageType === index_1.MessageType.Error; });
-            if (this.ErrorMessages.length > 0) {
+            var errorMessages = this.Messages.filter(function (f) { return f.MessageType === index_1.MessageType.Error; });
+            if (errorMessages.length > 0) {
                 return false;
             }
         }
