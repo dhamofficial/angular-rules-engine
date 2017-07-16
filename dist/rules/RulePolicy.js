@@ -1,6 +1,6 @@
 "use strict";
-var RenderType_1 = require("./RenderType");
-var Severity_1 = require("./Severity");
+var RenderType_1 = require('./RenderType');
+var Severity_1 = require('./Severity');
 /**
  * This is the base class for all rules. All rules will extend from this class. New rules
  * should extend [SimpleRule] or [CompositeRule] - these rule abstractions extend [RulePolicy].

@@ -1,1 +1,1 @@
-{"version":3,"file":"IAction.js","sourceRoot":"","sources":["file:///C:/work/matt vaughn/buildmotion/angular-rules-engine/src/action/IAction.ts"],"names":[],"mappings":"","sourcesContent":["\r\nexport interface IAction {\r\n\texecute();\r\n}\r\n"]}
+{"version":3,"file":"IAction.js","sourceRoot":"","sources":["file:///b:/buildmotion/angular-rules-engine/src/action/IAction.ts"],"names":[],"mappings":"","sourcesContent":["\r\nexport interface IAction {\r\n\texecute();\r\n}\r\n"]}

@@ -2,7 +2,6 @@
 /**
  * Use to indicate the result of the action.
  */
-var ActionResult;
 (function (ActionResult) {
     /**
      * Use to indicate that the action's result is success.
@@ -16,5 +15,6 @@ var ActionResult;
      * Use to indicate that the action's result is unknown.
      */
     ActionResult[ActionResult["Unknown"] = 3] = "Unknown";
-})(ActionResult = exports.ActionResult || (exports.ActionResult = {}));
+})(exports.ActionResult || (exports.ActionResult = {}));
+var ActionResult = exports.ActionResult;
 //# sourceMappingURL=/action/ActionResult.js.map

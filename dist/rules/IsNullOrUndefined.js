@@ -4,15 +4,14 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var index_1 = require("./index");
-var index_2 = require("./index");
+var index_1 = require('./index');
+var index_2 = require('./index');
 var IsNullOrUndefined = (function (_super) {
     __extends(IsNullOrUndefined, _super);
     function IsNullOrUndefined(name, message, target, isDisplayable) {
         if (isDisplayable === void 0) { isDisplayable = false; }
-        var _this = _super.call(this, name, message, isDisplayable) || this;
-        _this.target = target;
-        return _this;
+        _super.call(this, name, message, isDisplayable);
+        this.target = target;
     }
     IsNullOrUndefined.prototype.render = function () {
         if (this.target == null || typeof this.target === undefined || typeof this.target === "undefined") {
