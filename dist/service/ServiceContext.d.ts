@@ -10,7 +10,6 @@ export declare class ServiceContext {
      * specified service request.
      */
     Messages: Array<ServiceMessage>;
-    ErrorMessages: Array<ServiceMessage>;
     constructor();
     /**
      * Use this method to add a new message to the [ServiceContext].

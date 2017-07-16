@@ -1,4 +1,4 @@
-import { ServiceMessage } from './index';
+﻿import { ServiceMessage } from './index';
 import { MessageType } from './index';
 
 /**
@@ -13,8 +13,7 @@ export class ServiceContext{
      * specified service request. 
      */
     Messages: Array<ServiceMessage> = new Array<ServiceMessage>();
-    ErrorMessages: Array<ServiceMessage> = new Array<ServiceMessage>();
-
+    
     constructor(){}
 
     /**
@@ -29,8 +28,8 @@ export class ServiceContext{
      */
     hasErrors() : boolean{
         if(this.Messages && this.Messages.length > 0){
-            this.ErrorMessages = this.Messages.filter(f => f.MessageType === MessageType.Error);
-            if (this.ErrorMessages.length > 0) {
+            const errorMessages = this.Messages.filter(f => f.MessageType === MessageType.Error);
+            if (errorMessages.length > 0) {
                 return true;
             }
         }
@@ -42,8 +41,8 @@ export class ServiceContext{
      */
     isGood() : boolean{
         if(this.Messages && this.Messages.length > 0){
-            this.ErrorMessages = this.Messages.filter(f => f.MessageType === MessageType.Error);
-            if (this.ErrorMessages.length > 0) {
+            const errorMessages = this.Messages.filter(f => f.MessageType === MessageType.Error);
+            if (errorMessages.length > 0) {
                 return false;
             }
         }
