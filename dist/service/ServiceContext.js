@@ -1,5 +1,6 @@
 "use strict";
-var index_1 = require('./index');
+Object.defineProperty(exports, "__esModule", { value: true });
+var index_1 = require("./index");
 /**
  * Use this class to manage the context of a single service call. This
  * class will contain a list of any service messages added during the processing

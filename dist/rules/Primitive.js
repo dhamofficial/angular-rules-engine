@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // export class Primative{
 //     public isPrimative(item: string|number|boolean){
 //         if(this.isString(item) || this.isNumber(item) || this.isBoolean(item) ){

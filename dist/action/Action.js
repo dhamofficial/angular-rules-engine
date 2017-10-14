@@ -1,7 +1,8 @@
 "use strict";
-var index_1 = require('../validation/index');
-var index_2 = require('../validation/index');
-var index_3 = require('./index');
+Object.defineProperty(exports, "__esModule", { value: true });
+var index_1 = require("../validation/index");
+var index_2 = require("../validation/index");
+var index_3 = require("./index");
 /**
  * This is the framework Action class that provides the pipeline of pre/post
  * execution methods. This class implements the [Template Method] pattern.

@@ -1,8 +1,9 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var RenderType;
 (function (RenderType) {
     RenderType[RenderType["ExitOnFirstFalseEvaluation"] = 0] = "ExitOnFirstFalseEvaluation";
     RenderType[RenderType["ExitOnFirstTrueEvaluation"] = 1] = "ExitOnFirstTrueEvaluation";
     RenderType[RenderType["EvaluateAllRules"] = 2] = "EvaluateAllRules";
-})(exports.RenderType || (exports.RenderType = {}));
-var RenderType = exports.RenderType;
+})(RenderType = exports.RenderType || (exports.RenderType = {}));
 //# sourceMappingURL=/rules/RenderType.js.map
