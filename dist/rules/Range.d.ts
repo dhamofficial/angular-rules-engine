@@ -1,5 +1,5 @@
-import { CompositeRule } from './index';
 import { Primitive } from './index';
+import { CompositeRule } from './index';
 /**
  * Use this rule to determine if the specified target is within the specified range (start and end) values.
  *
@@ -21,7 +21,7 @@ export declare class Range extends CompositeRule {
      * @param target: The target object that the rules will be applied to.
      * @param start: The start range value - the lowest allowed boundary value.
      * @param end: The end range value - the highest allowed boundary value.
-     * @param isDisplayable: Indicates if the rule violation may be displayed or visible to the caller or client.
+     * @param isDisplayable: (Optional) Indicates if the rule violation may be displayed or visible to the caller or client. Default is [false].
      */
     constructor(name: string, message: string, target: Primitive, start: number, end: number, isDisplayable?: boolean);
 }

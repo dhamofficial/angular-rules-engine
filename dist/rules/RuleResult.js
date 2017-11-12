@@ -1,6 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var RuleResult = (function () {
+/**
+ * This class defines the result of a single rule evaluation.
+ */
+var /**
+ * This class defines the result of a single rule evaluation.
+ */
+RuleResult = (function () {
     function RuleResult(rulePolicy, target) {
         this.isValid = false;
         if (rulePolicy != null) {
@@ -12,5 +16,8 @@ var RuleResult = (function () {
     }
     return RuleResult;
 }());
-exports.RuleResult = RuleResult;
-//# sourceMappingURL=/rules/RuleResult.js.map
+/**
+ * This class defines the result of a single rule evaluation.
+ */
+export { RuleResult };
+//# sourceMappingURL=RuleResult.js.map

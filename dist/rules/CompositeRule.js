@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,11 +8,24 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var RulePolicy_1 = require("./RulePolicy");
-var RuleResult_1 = require("./RuleResult");
-var CompositeRule = (function (_super) {
+import { RulePolicy } from './RulePolicy';
+import { RuleResult } from './RuleResult';
+/**
+ * Use the [CompositeRule] as a base class for a complex rule - a rule that contains
+ * other rules.
+ */
+var /**
+ * Use the [CompositeRule] as a base class for a complex rule - a rule that contains
+ * other rules.
+ */
+CompositeRule = (function (_super) {
     __extends(CompositeRule, _super);
+    /**
+     *
+     * @param name The name of the rule.
+     * @param message The message to display if the rule is violated.
+     * @param isDisplayable Indicates if the rule is displayable.
+     */
     function CompositeRule(name, message, isDisplayable) {
         var _this = _super.call(this, name, message, isDisplayable) || this;
         _this.hasErrors = false;
@@ -37,9 +49,13 @@ var CompositeRule = (function (_super) {
             this.isValid = false;
             this.hasErrors = true;
         }
-        return new RuleResult_1.RuleResult(this);
+        return new RuleResult(this);
     };
     return CompositeRule;
-}(RulePolicy_1.RulePolicy));
-exports.CompositeRule = CompositeRule;
-//# sourceMappingURL=/rules/CompositeRule.js.map
+}(RulePolicy));
+/**
+ * Use the [CompositeRule] as a base class for a complex rule - a rule that contains
+ * other rules.
+ */
+export { CompositeRule };
+//# sourceMappingURL=CompositeRule.js.map

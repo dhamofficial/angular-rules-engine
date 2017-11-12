@@ -1,30 +1,35 @@
 {
   "name": "angular-rules-engine",
-  "version": "1.0.0",
-  "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications. Build something!",
+  "version": "2.0.0",
+  "description": "A serious rule engine developed using Typescript. Perfect for Angular applications. Build something amazing!",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p ./src",
+    "transpile": "ngc",
+    "build": "npm run transpile",
     "start": "node dist/start",
-    "lint": "tslint \"src/**/*.ts\""
+    "lint": "tslint \"src/app/**/*.ts\""
   },
   "private": false,
   "dependencies": {
-    "es6-shim": "0.35.1",
-    "reflect-metadata": "0.1.3",
-    "rxjs": "5.0.0-beta.6",
-    "systemjs": "0.19.26",
-    "zone.js": "0.6.12",
-    "typescript-dotnet-commonjs": "3.2.4"
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
+    "@angular/compiler": "^5.0.0",
+    "@angular/cli": "^1.5.0",
+    "@angular/compiler-cli": "^5.0.1",
     "codelyzer": "0.0.20",
+    "rxjs": "^5.0.1",
     "ts-node": "0.5.5",
     "tslint": "3.11.0",
-    "typescript": "2.0.3",
-    "typings": "1.3.1",
-    "typescript-dotnet-commonjs": "3.2.4"
+    "typescript": "^2.4.2",
+    "typescript-dotnet-commonjs": "3.2.4",
+    "typings": "1.3.1"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,8 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var RulePolicy_1 = require("./RulePolicy");
+import { RulePolicy } from './RulePolicy';
 /**
  * Use this class as a base [extends] class for simple rules. A simple contains
  * a single rule and target to evaluate.
@@ -18,7 +16,14 @@ var RulePolicy_1 = require("./RulePolicy");
  * If you require a rule that will contain more than one rule, you should
  * use extend the [CompositeRule] class.
  */
-var SimpleRule = (function (_super) {
+var /**
+ * Use this class as a base [extends] class for simple rules. A simple contains
+ * a single rule and target to evaluate.
+ *
+ * If you require a rule that will contain more than one rule, you should
+ * use extend the [CompositeRule] class.
+ */
+SimpleRule = (function (_super) {
     __extends(SimpleRule, _super);
     /**
      * The constructor for the simple rule.
@@ -29,6 +34,13 @@ var SimpleRule = (function (_super) {
         return _super.call(this, name, message, isDisplayable) || this;
     }
     return SimpleRule;
-}(RulePolicy_1.RulePolicy));
-exports.SimpleRule = SimpleRule;
-//# sourceMappingURL=/rules/SimpleRule.js.map
+}(RulePolicy));
+/**
+ * Use this class as a base [extends] class for simple rules. A simple contains
+ * a single rule and target to evaluate.
+ *
+ * If you require a rule that will contain more than one rule, you should
+ * use extend the [CompositeRule] class.
+ */
+export { SimpleRule };
+//# sourceMappingURL=SimpleRule.js.map

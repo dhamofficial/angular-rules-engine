@@ -16,6 +16,12 @@ export declare class RulePolicy implements IRuleComponent {
     renderType: RenderType;
     severity: Severity;
     source: string;
+    /**
+     * Overloaded constructor for the [RulePolicy] class.
+     * @param name: The name of the rule.
+     * @param message: The message to display when the rule is violated.
+     * @param isDisplayable: Indicates if the rule violation is displayble.
+     */
     constructor(name: string, message: string, isDisplayable: boolean);
     execute(): RuleResult;
     /**

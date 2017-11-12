@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,11 +8,23 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("./index");
-var index_2 = require("./index");
-var IsFalse = (function (_super) {
+import { SimpleRule } from './index';
+import { RuleResult } from './index';
+/**
+ * Use to indicate if the value is falsy.
+ */
+var /**
+ * Use to indicate if the value is falsy.
+ */
+IsFalse = (function (_super) {
     __extends(IsFalse, _super);
+    /**
+    * The constructor for the [IsFalse] rule.
+    * @param name: The name of the rule.
+    * @param message: The message to display when the rule is violated.
+    * @param target: The target that the rules are evaluated against.
+    * @param isDisplayable: Indicates if the rule violation is displayble. Default value is [false].
+    */
     function IsFalse(name, message, target, isDisplayable) {
         if (isDisplayable === void 0) { isDisplayable = false; }
         var _this = _super.call(this, name, message, isDisplayable) || this;
@@ -22,11 +33,15 @@ var IsFalse = (function (_super) {
     }
     IsFalse.prototype.render = function () {
         if (this.target) {
+            //if(true)-->false;
             this.isValid = false;
         }
-        return new index_2.RuleResult(this, this.target);
+        return new RuleResult(this, this.target);
     };
     return IsFalse;
-}(index_1.SimpleRule));
-exports.IsFalse = IsFalse;
-//# sourceMappingURL=/rules/IsFalse.js.map
+}(SimpleRule));
+/**
+ * Use to indicate if the value is falsy.
+ */
+export { IsFalse };
+//# sourceMappingURL=IsFalse.js.map

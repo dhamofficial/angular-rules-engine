@@ -1,0 +1,19 @@
+{
+    "project": {
+        "version": "2.0.0",
+        "name": "angular-rules-engine"
+    },
+    "apps": [
+        {
+            "tsconfig": "tsconfig.json",
+            "mobile": false,
+            "root": "src",
+            "prefix": "buildmotion"
+        }
+    ],
+    "defaults": {
+        "styleExt": "css",
+        "prefixInterfaces": false,
+        "lazyRoutePrefix": "+"
+    }
+}

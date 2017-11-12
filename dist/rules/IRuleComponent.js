@@ -1,3 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-//# sourceMappingURL=/rules/IRuleComponent.js.map
+//# sourceMappingURL=IRuleComponent.js.map

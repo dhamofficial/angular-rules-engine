@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,15 +8,18 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("./index");
-var index_2 = require("./index");
-var index_3 = require("./index");
+import { CompositeRule } from './index';
+import { IsNotNullOrUndefined } from './index';
+import { Range } from './index';
 /**
  * Use this rule to validate a string target. A valid string is not null or undefined; and it
  * is within the specified minimum and maxiumum length.
  */
-var StringIsNotNullEmptyRange = (function (_super) {
+var /**
+ * Use this rule to validate a string target. A valid string is not null or undefined; and it
+ * is within the specified minimum and maxiumum length.
+ */
+StringIsNotNullEmptyRange = (function (_super) {
     __extends(StringIsNotNullEmptyRange, _super);
     /**
      * The constructor for the [StringIsNotNullEmptyRangeRule].
@@ -39,13 +41,23 @@ var StringIsNotNullEmptyRange = (function (_super) {
     /**
      * A helper method to configure/add rules to the validation context.
      */
-    StringIsNotNullEmptyRange.prototype.configureRules = function () {
-        this.rules.push(new index_2.IsNotNullOrUndefined('StringIsNotNull', 'The string target is null or undefined.', this.target));
+    /**
+         * A helper method to configure/add rules to the validation context.
+         */
+    StringIsNotNullEmptyRange.prototype.configureRules = /**
+         * A helper method to configure/add rules to the validation context.
+         */
+    function () {
+        this.rules.push(new IsNotNullOrUndefined('StringIsNotNull', 'The string target is null or undefined.', this.target));
         if (this.target != null) {
-            this.rules.push(new index_3.Range('TargetLengthIsWithinRange', 'The string value is not within the specified range.', this.target.toString().length, this.minLength, this.maxLength));
+            this.rules.push(new Range('TargetLengthIsWithinRange', 'The string value is not within the specified range.', this.target.toString().length, this.minLength, this.maxLength));
         }
     };
     return StringIsNotNullEmptyRange;
-}(index_1.CompositeRule));
-exports.StringIsNotNullEmptyRange = StringIsNotNullEmptyRange;
-//# sourceMappingURL=/rules/StringIsNotNullEmptyRange.js.map
+}(CompositeRule));
+/**
+ * Use this rule to validate a string target. A valid string is not null or undefined; and it
+ * is within the specified minimum and maxiumum length.
+ */
+export { StringIsNotNullEmptyRange };
+//# sourceMappingURL=StringIsNotNullEmptyRange.js.map

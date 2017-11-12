@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,13 +8,24 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var dCompare = require("typescript-dotnet-commonjs/System/Compare");
-var Compare = dCompare;
-var index_1 = require("./index");
-var index_2 = require("./index");
-var AreNotEqual = (function (_super) {
+import { compare } from 'typescript-dotnet-commonjs/System/Compare';
+import { SimpleRule, RuleResult } from './index';
+/**
+ * Use to determine if the target is not equal to the comparison target.
+ */
+var /**
+ * Use to determine if the target is not equal to the comparison target.
+ */
+AreNotEqual = (function (_super) {
     __extends(AreNotEqual, _super);
+    /**
+    * The constructor for the [AreNotEqualRule] rule.
+    * @param name: The name of the rule.
+    * @param message: The message to display when the rule is violated.
+    * @param target: The target that the rules are evaluated against.
+    * @param comparison: The comparison target the rules are evaluated against.
+    * @param isDisplayable: (Optional) Indicates if the rule violation is displayble. Default is [true].
+    */
     function AreNotEqual(name, message, target, comparison, isDisplayable) {
         if (isDisplayable === void 0) { isDisplayable = true; }
         var _this = _super.call(this, name, message, isDisplayable) || this;
@@ -24,12 +34,15 @@ var AreNotEqual = (function (_super) {
         return _this;
     }
     AreNotEqual.prototype.render = function () {
-        if (Compare.compare(this.target, this.comparison, true) === 0 /* Equal */) {
+        if (compare(this.target, this.comparison, true) === 0 /* Equal */) {
             this.isValid = false;
         }
-        return new index_2.RuleResult(this, this.target);
+        return new RuleResult(this, this.target);
     };
     return AreNotEqual;
-}(index_1.SimpleRule));
-exports.AreNotEqual = AreNotEqual;
-//# sourceMappingURL=/rules/AreNotEqual.js.map
+}(SimpleRule));
+/**
+ * Use to determine if the target is not equal to the comparison target.
+ */
+export { AreNotEqual };
+//# sourceMappingURL=AreNotEqual.js.map

@@ -1,5 +1,5 @@
-import { CompositeRule } from './index';
 import { Primitive } from './index';
+import { CompositeRule } from './index';
 /**
  * Use this rule to validate a string target. A valid string is not null or undefined; and it
  * is within the specified minimum and maxiumum length.

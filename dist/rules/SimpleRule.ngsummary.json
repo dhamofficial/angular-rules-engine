@@ -1,0 +1,1 @@
+{"moduleName":null,"summaries":[{"symbol":{"__symbol":0,"members":[]},"metadata":{"__symbolic":"class","extends":{"__symbol":1,"members":[]},"members":{"__ctor__":[{"__symbolic":"constructor","parameters":[null,null,null]}]}}}],"symbols":[{"__symbol":0,"name":"SimpleRule","filePath":"./SimpleRule"},{"__symbol":1,"name":"RulePolicy","filePath":"./RulePolicy"}]}

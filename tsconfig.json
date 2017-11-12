@@ -1,36 +1,52 @@
 {
-	"compileOnSave": false,
 	"compilerOptions": {
-		"declaration": true,
-		"emitDecoratorMetadata": true,
+		"baseUrl": "",
+		"declaration": true, /* generate type definition files; */
 		"experimentalDecorators": true,
 		"inlineSources": true,
-		"mapRoot": "/",
-		"module": "commonjs",
+		"lib": [
+			"es2015",
+			"dom"
+		],
+		"module": "es2015",
 		"moduleResolution": "node",
-		"noEmitOnError": false,
-		"noImplicitAny": false,
+		"noImplicitAny": false, /* true to support Angular 4.0 */
 		"outDir": "dist",
-		"rootDir": "src",
+		"paths": {
+			"@angular/core": [
+				"node_modules/@angular/core/*"
+			],
+			"@angular/http": [
+				"node_modules/@angular/http/*"
+			],
+			"@angular/router": [
+				"node_modules/@angular/router/*"
+			],
+			"rxjs/*": [
+				"node_modules/rxjs/*"
+			],
+			"rxjs/add/operator/cache": [
+				"node_modules/rxjs/add/operator/cache/*"
+			],
+			"buildmotion-alert": [
+				"node_modules/buildmotion-alert/*"
+			],
+			"buildmotion-logging": [
+				"node_modules/buildmotion-logging/*"
+			]
+		},
+		"rootDir": "src/app",
+		"skipLibCheck": true,
 		"sourceMap": true,
+		"strictNullChecks": true, /* support for Angular 4.1 */
+		"stripInternal": true,
 		"target": "es5"
 	},
-	"formatCodeOptions": {
-		"indentSize": 4,
-		"tabSize": 4,
-		"newLineCharacter": "\r\n",
-		"convertTabsToSpaces": true,
-		"insertSpaceAfterCommaDelimiter": true,
-		"insertSpaceAfterSemicolonInForStatements": true,
-		"insertSpaceBeforeAndAfterBinaryOperators": true,
-		"insertSpaceAfterKeywordsInControlFlowStatements": true,
-		"insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-		"insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-		"placeOpenBraceOnNewLineForFunctions": false,
-		"placeOpenBraceOnNewLineForControlBlocks": false
-	},
-	"exclude": [
-		"node_modules",
-		"dist"
-	]
+	"files": [
+		"./src/app/index.ts"
+	],
+	"angularCompilerOptions": {
+		"strictMetadataEmit": true,
+		"genDir": "aot-dist"
+	}
 }

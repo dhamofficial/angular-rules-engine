@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,11 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("./index");
-var index_2 = require("./index");
-var index_3 = require("./index");
-var index_4 = require("./index");
+import { CompositeRule, IsNotNullOrUndefined, Min, Max } from './index';
 /**
  * Use this rule to determine if the specified target is within the specified range (start and end) values.
  *
@@ -24,7 +19,17 @@ var index_4 = require("./index");
  * Ex: 0 is not within 1 and 3. The target is not valid.
  * Ex: 4 is not within 1 and 3. The target is not valid.
  */
-var Range = (function (_super) {
+var /**
+ * Use this rule to determine if the specified target is within the specified range (start and end) values.
+ *
+ * The range values are inclusive.
+ *
+ * Ex: 1 is within 1 and 3. The target is valid.
+ * Ex: 2 is within 1 and 3. The target is valid.
+ * Ex: 0 is not within 1 and 3. The target is not valid.
+ * Ex: 4 is not within 1 and 3. The target is not valid.
+ */
+Range = (function (_super) {
     __extends(Range, _super);
     /**
      * Constructor for the [Range] rule.
@@ -33,7 +38,7 @@ var Range = (function (_super) {
      * @param target: The target object that the rules will be applied to.
      * @param start: The start range value - the lowest allowed boundary value.
      * @param end: The end range value - the highest allowed boundary value.
-     * @param isDisplayable: Indicates if the rule violation may be displayed or visible to the caller or client.
+     * @param isDisplayable: (Optional) Indicates if the rule violation may be displayed or visible to the caller or client. Default is [false].
      */
     function Range(name, message, target, start, end, isDisplayable) {
         if (isDisplayable === void 0) { isDisplayable = false; }
@@ -42,14 +47,24 @@ var Range = (function (_super) {
         _this.start = start;
         _this.end = end;
         _this.isDisplayable = isDisplayable;
-        _this.rules.push(new index_2.IsNotNullOrUndefined('TargetIsNotNull', 'The target is null or undefined.', _this.target));
+        _this.rules.push(new IsNotNullOrUndefined('TargetIsNotNull', 'The target is null or undefined.', _this.target));
         if (_this.target != null) {
-            _this.rules.push(new index_3.Min('MinValue', 'The value must be equal to or greater than the start range value.', _this.target, _this.start));
-            _this.rules.push(new index_4.Max('MaxValue', 'The value must be equal to or less than the end range value.', _this.target, _this.end));
+            _this.rules.push(new Min('MinValue', 'The value must be equal to or greater than the start range value.', _this.target, _this.start));
+            _this.rules.push(new Max('MaxValue', 'The value must be equal to or less than the end range value.', _this.target, _this.end));
         }
         return _this;
     }
     return Range;
-}(index_1.CompositeRule));
-exports.Range = Range;
-//# sourceMappingURL=/rules/Range.js.map
+}(CompositeRule));
+/**
+ * Use this rule to determine if the specified target is within the specified range (start and end) values.
+ *
+ * The range values are inclusive.
+ *
+ * Ex: 1 is within 1 and 3. The target is valid.
+ * Ex: 2 is within 1 and 3. The target is valid.
+ * Ex: 0 is not within 1 and 3. The target is not valid.
+ * Ex: 4 is not within 1 and 3. The target is not valid.
+ */
+export { Range };
+//# sourceMappingURL=Range.js.map
