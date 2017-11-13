@@ -1,4 +1,4 @@
-import CompareResult from 'typescript-dotnet-commonjs/System/CompareResult';
+import {CompareResult} from 'typescript-dotnet-commonjs/System/CompareResult';
 import { compare } from 'typescript-dotnet-commonjs/System/Compare';
 
 import { SimpleRule, RuleResult, Primitive } from './index';
