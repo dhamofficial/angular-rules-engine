@@ -2,6 +2,12 @@
 # Angular Rules Engine
 The Angular Rules Engine is a Javascript/Typescript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation. 
 
+## Version 2.0.x Released
+This version supports UMD. Additionally, the [Action] namespace was removed. The [Action] Framework is now a separate NPM package. 
+
+* (GitHub.com)[https://github.com/buildmotion/angular-actions]
+* (NPM)[https://www.npmjs.com/package/angular-actions]
+
 ## There is a reference application on Github.com: [angular-rules-engine-EXAMPLE](https://github.com/buildmotion/angular-rules-engine-EXAMPLE)
 The reference applcation demonstrates how to setup and use the rule engine. Check out the implementation of the simple and complex rules. 
 
