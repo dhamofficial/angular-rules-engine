@@ -1,4 +1,4 @@
-import { SimpleRule } from './index';
+import { SimpleRule } from './SimpleRule';
 /**
  * Use to determine if the target is [null] or [undefined].
  */

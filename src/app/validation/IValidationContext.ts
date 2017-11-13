@@ -1,6 +1,6 @@
 import {ValidationContextState} from './index';
-import {RuleResult} from '../rules/index';
-import {RulePolicy} from '../rules/index';
+import {RuleResult} from '../rules/RuleResult';
+import {RulePolicy} from '../rules/RulePolicy';
 
 /**
  * Use this interface class to define the structure of a Validation Context.

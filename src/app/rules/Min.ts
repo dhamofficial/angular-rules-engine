@@ -1,7 +1,9 @@
 import {CompareResult} from 'typescript-dotnet-commonjs/System/CompareResult';
 import { compare } from 'typescript-dotnet-commonjs/System/Compare';
 
-import { SimpleRule, RuleResult, Primitive } from './index';
+import { SimpleRule } from './SimpleRule';
+import { RuleResult } from './RuleResult';
+import { Primitive } from './Primitive';
 
 /**
  * Use the [Min] rule to determine if the target value is equal to or greater than the minimum

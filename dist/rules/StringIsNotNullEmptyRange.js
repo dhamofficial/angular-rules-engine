@@ -8,9 +8,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { CompositeRule } from './index';
-import { IsNotNullOrUndefined } from './index';
-import { Range } from './index';
+import { CompositeRule } from './CompositeRule';
+import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
+import { Range } from './Range';
 /**
  * Use this rule to validate a string target. A valid string is not null or undefined; and it
  * is within the specified minimum and maxiumum length.

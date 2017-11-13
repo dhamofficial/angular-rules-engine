@@ -1,11 +1,11 @@
 ﻿import {CompareResult} from 'typescript-dotnet-commonjs/System/CompareResult';
 import { compare } from 'typescript-dotnet-commonjs/System/Compare';
 
-import { SimpleRule, RuleResult, Primitive } from './index';
+import { SimpleRule } from './SimpleRule'; import { RuleResult } from './RuleResult'; import { Primitive } from './Primitive';
 
-import {CompositeRule} from './index';
-import {IsNotNullOrUndefined} from './index';
-import {Range} from './index';
+import {CompositeRule} from './CompositeRule';
+import {IsNotNullOrUndefined} from './IsNotNullOrUndefined';
+import {Range} from './Range';
 
 /**
  * Use this rule to validate a string target. A valid string is not null or undefined; and it

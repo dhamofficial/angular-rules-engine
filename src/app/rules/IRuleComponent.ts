@@ -1,4 +1,4 @@
-import {RuleResult} from './index';
+import {RuleResult} from './RuleResult';
 
 /**
  * An interface that defines the required shape/structure for all rules. The rule engine

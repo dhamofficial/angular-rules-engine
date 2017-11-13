@@ -1,4 +1,5 @@
-import { SimpleRule, Primitive } from './index';
+import { SimpleRule } from './SimpleRule';
+import { Primitive } from './Primitive';
 /**
  * Use to determine if the target is not equal to the comparison target.
  */

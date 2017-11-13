@@ -379,7 +379,7 @@ import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
 
 import {CompositeRule} from './index';
-import {RuleResult} from './index';
+import {RuleResult} from './RuleResult';
 import {Primitive} from './index';
 import {IsNotNullOrUndefined} from './index';
 import {Range} from './index';
@@ -431,7 +431,7 @@ import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
 
 import {CompositeRule} from './index';
-import {RuleResult} from './index';
+import {RuleResult} from './RuleResult';
 import {Primitive} from './index';
 import {IsNotNullOrUndefined} from './index';
 import {Min} from './index';

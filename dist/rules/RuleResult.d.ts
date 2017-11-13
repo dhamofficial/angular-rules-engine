@@ -1,5 +1,5 @@
-import { RulePolicy } from './index';
-import { CompositeRule } from './index';
+import { RulePolicy } from './RulePolicy';
+import { CompositeRule } from './CompositeRule';
 /**
  * This class defines the result of a single rule evaluation.
  */

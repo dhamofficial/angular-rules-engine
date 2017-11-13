@@ -1,7 +1,7 @@
 import { IValidationContext } from './index';
 import { ValidationContextState } from './index';
-import { RuleResult } from '../rules/index';
-import { RulePolicy } from '../rules/index';
+import { RuleResult } from '../rules/RuleResult';
+import { RulePolicy } from '../rules/RulePolicy';
 /**
  * Use this class to create a new Validation Context for your application. With this
  * context, you can add rules and evaluate the rules.

@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('typescript-dotnet-commonjs/System/Compare')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'typescript-dotnet-commonjs/System/Compare'], factory) :
-	(factory((global['angular-rules-engine'] = {}),global.Compare));
+	(factory((global.angularRulesEngine = {}),global['typescript-dotnet-commonjs/System/prototype']));
 }(this, (function (exports,Compare) { 'use strict';
 
 /**
@@ -195,6 +195,46 @@ var SimpleRule = (function (_super) {
     }
     return SimpleRule;
 }(RulePolicy));
+
+var __extends$2 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/**
+ * Use to determine if the target is [null] or [undefined].
+ */
+var IsNullOrUndefined = (function (_super) {
+    __extends$2(IsNullOrUndefined, _super);
+    /**
+     * The constructor for the [IsNullOrUndefined] rule.
+     * @param name: The name of the rule.
+     * @param message: The message to display when the rule is violated.
+     * @param target: The target that the rules are evaluated against.
+     * @param isDisplayable: Indicates if the rule violation is displayble. Default value is [false].
+     */
+    function IsNullOrUndefined(name, message, target, isDisplayable) {
+        if (isDisplayable === void 0) { isDisplayable = false; }
+        var _this = _super.call(this, name, message, isDisplayable) || this;
+        _this.target = target;
+        return _this;
+    }
+    IsNullOrUndefined.prototype.render = function () {
+        if (this.target == null || typeof this.target === undefined || typeof this.target === "undefined") {
+            this.isValid = true;
+        }
+        else {
+            this.isValid = false;
+        }
+        return new RuleResult(this, this.target);
+    };
+    return IsNullOrUndefined;
+}(SimpleRule));
 
 var __extends$3 = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -578,46 +618,6 @@ var StringIsNotNullEmptyRange = (function (_super) {
     return StringIsNotNullEmptyRange;
 }(CompositeRule));
 
-var __extends$2 = (undefined && undefined.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-/**
- * Use to determine if the target is [null] or [undefined].
- */
-var IsNullOrUndefined = (function (_super) {
-    __extends$2(IsNullOrUndefined, _super);
-    /**
-     * The constructor for the [IsNullOrUndefined] rule.
-     * @param name: The name of the rule.
-     * @param message: The message to display when the rule is violated.
-     * @param target: The target that the rules are evaluated against.
-     * @param isDisplayable: Indicates if the rule violation is displayble. Default value is [false].
-     */
-    function IsNullOrUndefined(name, message, target, isDisplayable) {
-        if (isDisplayable === void 0) { isDisplayable = false; }
-        var _this = _super.call(this, name, message, isDisplayable) || this;
-        _this.target = target;
-        return _this;
-    }
-    IsNullOrUndefined.prototype.render = function () {
-        if (this.target == null || typeof this.target === undefined || typeof this.target === "undefined") {
-            this.isValid = true;
-        }
-        else {
-            this.isValid = false;
-        }
-        return new RuleResult(this, this.target);
-    };
-    return IsNullOrUndefined;
-}(SimpleRule));
-
 /**
  * Use this class to create a message for the current [ServiceContext].
  */
@@ -965,3 +965,4 @@ exports.ValidationContext = ValidationContext;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
+//# sourceMappingURL=angular-rules-engine.umd.js.map

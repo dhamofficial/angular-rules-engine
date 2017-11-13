@@ -1,9 +1,12 @@
 ﻿import {CompareResult} from 'typescript-dotnet-commonjs/System/CompareResult';
 import { compare } from 'typescript-dotnet-commonjs/System/Compare';
 
-import { SimpleRule, RuleResult, Primitive } from './index';
+import { SimpleRule } from './SimpleRule'; import { RuleResult } from './RuleResult'; import { Primitive } from './Primitive';
 
-import {CompositeRule, IsNotNullOrUndefined, Min, Max} from './index';
+import { CompositeRule } from './CompositeRule';
+import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
+import { Min } from './Min';
+import { Max } from './Max';
 
 /**
  * Use this rule to determine if the specified target is within the specified range (start and end) values.

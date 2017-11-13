@@ -1,6 +1,6 @@
 
-import {SimpleRule} from './index';
-import {RuleResult} from './index';
+import {SimpleRule} from './SimpleRule';
+import {RuleResult} from './RuleResult';
 
 /**
  * Use to indicate if the value is falsy.

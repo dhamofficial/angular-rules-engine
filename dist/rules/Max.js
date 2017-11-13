@@ -9,7 +9,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { compare } from 'typescript-dotnet-commonjs/System/Compare';
-import { SimpleRule, RuleResult } from './index';
+import { SimpleRule } from './SimpleRule';
+import { RuleResult } from './RuleResult';
 /**
  * Use the [Max] rule to determine if the target value is equal to or less than
  * the comparison value.

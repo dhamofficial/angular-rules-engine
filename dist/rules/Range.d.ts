@@ -1,5 +1,5 @@
-import { Primitive } from './index';
-import { CompositeRule } from './index';
+import { Primitive } from './Primitive';
+import { CompositeRule } from './CompositeRule';
 /**
  * Use this rule to determine if the specified target is within the specified range (start and end) values.
  *

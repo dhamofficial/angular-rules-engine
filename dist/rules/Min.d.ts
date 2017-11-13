@@ -1,4 +1,5 @@
-import { SimpleRule, Primitive } from './index';
+import { SimpleRule } from './SimpleRule';
+import { Primitive } from './Primitive';
 /**
  * Use the [Min] rule to determine if the target value is equal to or greater than the minimum
  * allowed value [comparison].

@@ -8,7 +8,10 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { CompositeRule, IsNotNullOrUndefined, Min, Max } from './index';
+import { CompositeRule } from './CompositeRule';
+import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
+import { Min } from './Min';
+import { Max } from './Max';
 /**
  * Use this rule to determine if the specified target is within the specified range (start and end) values.
  *

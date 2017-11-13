@@ -9,7 +9,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { compare } from 'typescript-dotnet-commonjs/System/Compare';
-import { SimpleRule, RuleResult } from './index';
+import { SimpleRule } from './SimpleRule';
+import { RuleResult } from './RuleResult';
 /**
  * Use to determine if the target is equal to the comparison target.
  */

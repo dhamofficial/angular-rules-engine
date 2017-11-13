@@ -1,5 +1,5 @@
-import {SimpleRule} from './index';
-import {RuleResult} from './index';
+import {SimpleRule} from './SimpleRule';
+import {RuleResult} from './RuleResult';
 
 /**
  * Use to determine if the target is NOT [null] or [undefined].
