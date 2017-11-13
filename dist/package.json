@@ -1,6 +1,6 @@
 {
   "name": "angular-rules-engine",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications. Build something!",
   "license": "MIT",
   "main": "index.js",
@@ -39,9 +39,9 @@
     "url": "https://github.com/buildmotion/angular-rules-engine/issues"
   },
   "homepage": "https://github.com/buildmotion/angular-rules-engine#readme",
-  "_id": "angular-rules-engine@2.0.0",
+  "_id": "angular-rules-engine@2.0.1",
   "_shasum": "0380024cc357f42b968901d4f90632637b4f14fb",
-  "_from": "angular-rules-engine@2.0.0",
+  "_from": "angular-rules-engine@2.0.1",
   "_npmVersion": "2.15.8",
   "_nodeVersion": "4.4.7",
   "_npmUser": {
