@@ -12,29 +12,7 @@
 		"moduleResolution": "node",
 		"noImplicitAny": false, /* true to support Angular 4.0 */
 		"outDir": "dist",
-		"paths": {
-			"@angular/core": [
-				"node_modules/@angular/core/*"
-			],
-			"@angular/http": [
-				"node_modules/@angular/http/*"
-			],
-			"@angular/router": [
-				"node_modules/@angular/router/*"
-			],
-			"rxjs/*": [
-				"node_modules/rxjs/*"
-			],
-			"rxjs/add/operator/cache": [
-				"node_modules/rxjs/add/operator/cache/*"
-			],
-			"buildmotion-alert": [
-				"node_modules/buildmotion-alert/*"
-			],
-			"buildmotion-logging": [
-				"node_modules/buildmotion-logging/*"
-			]
-		},
+		"paths": {},
 		"rootDir": "src/app",
 		"skipLibCheck": true,
 		"sourceMap": true,
