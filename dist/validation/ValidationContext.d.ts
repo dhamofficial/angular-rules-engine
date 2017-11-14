@@ -1,5 +1,5 @@
-import { IValidationContext } from './index';
-import { ValidationContextState } from './index';
+import { IValidationContext } from './IValidationContext';
+import { ValidationContextState } from './ValidationContextState';
 import { RuleResult } from '../rules/RuleResult';
 import { RulePolicy } from '../rules/RulePolicy';
 /**

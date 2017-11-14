@@ -1,4 +1,4 @@
-import { ValidationContextState } from './index';
+import { ValidationContextState } from './ValidationContextState';
 /**
  * Use this class to create a new Validation Context for your application. With this
  * context, you can add rules and evaluate the rules.

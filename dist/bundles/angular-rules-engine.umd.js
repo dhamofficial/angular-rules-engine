@@ -619,6 +619,95 @@ var StringIsNotNullEmptyRange = (function (_super) {
 }(CompositeRule));
 
 /**
+ * Use to indicate the type for the [ServiceMessage].
+ */
+/**
+ * Use to indicate the type for the [ServiceMessage].
+ */
+
+/**
+ * Use to indicate the type for the [ServiceMessage].
+ */
+(function (MessageType) {
+    /**
+     * Use to indicate the message type is informational.
+     */
+    MessageType[MessageType["Information"] = 1] = "Information";
+    /**
+     * Use to indicate the message type is warning.
+     */
+    MessageType[MessageType["Warning"] = 2] = "Warning";
+    /**
+     * Use to indicate the message type is error.
+     */
+    MessageType[MessageType["Error"] = 3] = "Error";
+})(exports.MessageType || (exports.MessageType = {}));
+
+/**
+ * Use this class to manage the context of a single service call. This
+ * class will contain a list of any service messages added during the processing
+ * of a service request.
+ */
+var ServiceContext = (function () {
+    function ServiceContext() {
+        /**
+             * A list of service messages added by the application during the processing of the
+             * specified service request.
+             */
+        this.Messages = new Array();
+    }
+    /**
+     * Use this method to add a new message to the [ServiceContext].
+     */
+    /**
+         * Use this method to add a new message to the [ServiceContext].
+         */
+    ServiceContext.prototype.addMessage = /**
+         * Use this method to add a new message to the [ServiceContext].
+         */
+    function (message) {
+        this.Messages.push(message);
+    };
+    /**
+     * Use to determine if the current [ServiceContext] contains any messages with type of [Error].
+     */
+    /**
+         * Use to determine if the current [ServiceContext] contains any messages with type of [Error].
+         */
+    ServiceContext.prototype.hasErrors = /**
+         * Use to determine if the current [ServiceContext] contains any messages with type of [Error].
+         */
+    function () {
+        if (this.Messages && this.Messages.length > 0) {
+            var errorMessages = this.Messages.filter(function (f) { return f.MessageType === exports.MessageType.Error; });
+            if (errorMessages.length > 0) {
+                return true;
+            }
+        }
+        return false;
+    };
+    /**
+     * Use to determine if the current [ServiceContext] does not contain any errors.
+     */
+    /**
+         * Use to determine if the current [ServiceContext] does not contain any errors.
+         */
+    ServiceContext.prototype.isGood = /**
+         * Use to determine if the current [ServiceContext] does not contain any errors.
+         */
+    function () {
+        if (this.Messages && this.Messages.length > 0) {
+            var errorMessages = this.Messages.filter(function (f) { return f.MessageType === exports.MessageType.Error; });
+            if (errorMessages.length > 0) {
+                return false;
+            }
+        }
+        return true;
+    };
+    return ServiceContext;
+}());
+
+/**
  * Use this class to create a message for the current [ServiceContext].
  */
 var ServiceMessage = (function () {
@@ -726,95 +815,6 @@ var ServiceMessage = (function () {
         return "Name: " + this.Name + "; Message: " + this.Message + "; MessageType: " + this.MessageType.toString() + "; Source: " + this.Source + "; DisplayToUser: " + this.DisplayToUser;
     };
     return ServiceMessage;
-}());
-
-/**
- * Use to indicate the type for the [ServiceMessage].
- */
-/**
- * Use to indicate the type for the [ServiceMessage].
- */
-
-/**
- * Use to indicate the type for the [ServiceMessage].
- */
-(function (MessageType) {
-    /**
-     * Use to indicate the message type is informational.
-     */
-    MessageType[MessageType["Information"] = 1] = "Information";
-    /**
-     * Use to indicate the message type is warning.
-     */
-    MessageType[MessageType["Warning"] = 2] = "Warning";
-    /**
-     * Use to indicate the message type is error.
-     */
-    MessageType[MessageType["Error"] = 3] = "Error";
-})(exports.MessageType || (exports.MessageType = {}));
-
-/**
- * Use this class to manage the context of a single service call. This
- * class will contain a list of any service messages added during the processing
- * of a service request.
- */
-var ServiceContext = (function () {
-    function ServiceContext() {
-        /**
-             * A list of service messages added by the application during the processing of the
-             * specified service request.
-             */
-        this.Messages = new Array();
-    }
-    /**
-     * Use this method to add a new message to the [ServiceContext].
-     */
-    /**
-         * Use this method to add a new message to the [ServiceContext].
-         */
-    ServiceContext.prototype.addMessage = /**
-         * Use this method to add a new message to the [ServiceContext].
-         */
-    function (message) {
-        this.Messages.push(message);
-    };
-    /**
-     * Use to determine if the current [ServiceContext] contains any messages with type of [Error].
-     */
-    /**
-         * Use to determine if the current [ServiceContext] contains any messages with type of [Error].
-         */
-    ServiceContext.prototype.hasErrors = /**
-         * Use to determine if the current [ServiceContext] contains any messages with type of [Error].
-         */
-    function () {
-        if (this.Messages && this.Messages.length > 0) {
-            var errorMessages = this.Messages.filter(function (f) { return f.MessageType === exports.MessageType.Error; });
-            if (errorMessages.length > 0) {
-                return true;
-            }
-        }
-        return false;
-    };
-    /**
-     * Use to determine if the current [ServiceContext] does not contain any errors.
-     */
-    /**
-         * Use to determine if the current [ServiceContext] does not contain any errors.
-         */
-    ServiceContext.prototype.isGood = /**
-         * Use to determine if the current [ServiceContext] does not contain any errors.
-         */
-    function () {
-        if (this.Messages && this.Messages.length > 0) {
-            var errorMessages = this.Messages.filter(function (f) { return f.MessageType === exports.MessageType.Error; });
-            if (errorMessages.length > 0) {
-                return false;
-            }
-        }
-        return true;
-    };
-    return ServiceContext;
 }());
 
 /**

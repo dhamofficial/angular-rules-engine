@@ -1,4 +1,4 @@
-import { MessageType } from './index';
+import { MessageType } from './MessageType';
 /**
  * Use this class to manage the context of a single service call. This
  * class will contain a list of any service messages added during the processing
