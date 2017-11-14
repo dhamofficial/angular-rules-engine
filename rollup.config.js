@@ -4,8 +4,9 @@ export default {
 	sourceMap: true, // option adds a sourcemap inside the generated file
 	format: 'umd', // 
 	moduleName: 'angularRulesEngine',
+	external: [ 'typescript-dotnet-commonjs/System/Compare' ],
 	globals: {
-		'typescript-dotnet-commonjs': 'typescript-dotnet-umd',
+		'typescript-dotnet-commonjs': 'typescript-dotnet-commonjs',
 		'typescript-dotnet-commonjs/System/Compare': 'typescript-dotnet-commonjs/System/prototype'
 	}
 }
