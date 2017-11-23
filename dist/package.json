@@ -1,18 +1,12 @@
 {
-/* Configuring the package
- * So, now we have two different versions of our code esm and ES5 UMD bundle. 
- * The question is what entry file in package.json should we provide? We 
- * want bundlers which understand esm to use the ES2015 modules, and bundles 
- * which don’t know how to use ES2015 modules to use the UMD bundle instead.
-*/
   "name": "angular-rules-engine",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications. Build something!",
   "license": "MIT",
-  "main": "bundles/angular-rules-engine.umd.js", /* point to [ES5 UMD] version of the module */
-  "module": "angular-rules-engine.module.js", /* points to the [esm] version of the module */
-  "jsnext:main": "angular-rules-engine.module.js", /* points to the [esm] version of the module */
-  "types": "angular-rules-engine.module.d.ts",
+  "main": "bundles/angular-rules-engine.umd.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
+  "types": "index.d.ts",
   "private": false,
   "peerDependencies": {
     "typescript-dotnet-commonjs": "3.2.4"
