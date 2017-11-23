@@ -9,7 +9,7 @@ This version supports UMD. Additionally, the [Action] namespace was removed. The
 * [NPM](https://www.npmjs.com/package/angular-actions)
 
 ## There is a reference application on Github.com: [angular-rules-engine-EXAMPLE](https://github.com/buildmotion/angular-rules-engine-EXAMPLE)
-The reference applcation demonstrates how to setup and use the rule engine. Check out the implementation of the simple and complex rules. 
+The reference application demonstrates how to setup and use the rule engine. Check out the implementation of the simple and complex rules. 
 
 ## Why use this rule engine?
 + Provides a consistent way to implement business and validation rules and provide a consistent mechanism to retrieve the results.
@@ -37,7 +37,7 @@ Two core principles of good software design are [Separation of Concerns (SoC)](h
 
 A business rule engine allows the application to have a good Separation of Concerns (SOR). The Angular Rules Engine allows you to:
 
-+ Quicky start using out-of-the-box rules that are already implemented.
++ Quickly start using out-of-the-box rules that are already implemented.
 + Create custom rules that are either simple or composite.
 + Create rules that can be reused throughout the application. Code reuse eliminates copy/paste of common rules.
 + Use a single ValidationContext to add rules, execute rules, and evaluate the rule results. 
@@ -47,12 +47,12 @@ A business rule engine allows the application to have a good Separation of Conce
 These are features that are already in the works:
 + Support for Xor rules.
 + Early exit on rule evaluations on first rule violation.
-+ Early exit on rule evaluations on first true evalation. 
++ Early exit on rule evaluations on first true evaluation. 
 
 # Getting Started :: New Angular 2 Application
 1. Create a new Angular 2 project using the Angular CLI
 2. Use NPM to install the package: `npm install --save angular-rules-engine`
-3. Run npm install. This will retrive the package and add it to the node_modules folder. Any dependencies used by the package will also be downloaded and installed. 
+3. Run npm install. This will retrieve the package and add it to the node_modules folder. Any dependencies used by the package will also be downloaded and installed. 
 
 ## Getting Started :: Using the Angular-Rules-Engine
 There are only (4) steps to use the angular-rules-engine.
@@ -328,9 +328,9 @@ export class IsTrue extends SimpleRule {
 ```
 
 ## Composite Rules
-A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerfule pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
+A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerful pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
 
-You are creating a rule-tree where all rules will have to evalute to valid for the container rule to be valid. This pattern allows a developer to create new custom rules and then use those rules with the default rules to orchestrate a rule implementation against a target object or value. 
+You are creating a rule-tree where all rules will have to evaluate to valid for the container rule to be valid. This pattern allows a developer to create new custom rules and then use those rules with the default rules to orchestrate a rule implementation against a target object or value. 
 
 The `CompositeRule` extends from `RulePolicy` which has the responsible of calling `render()` on each rule. In case of a composite rule, this method will iterate through the list of rules and call the the `execute()` method of each rule. Then the results are processed to determine if *any* of the rules failed. 
 
@@ -370,7 +370,7 @@ export class CompositeRule extends RulePolicy {
 ```
 
 The following shows an implementation of a composite rule. Basically, this rule is using (2) default rules, both of which are also
-composite rules. All rules within each composite must evalute to true for this rule to be valid. 
+composite rules. All rules within each composite must evaluate to true for this rule to be valid. 
 
 ```js
 import dCompareResult = require('typescript-dotnet-commonjs/System/CompareResult');

@@ -7,13 +7,15 @@
   "scripts": {
     "transpile": "ngc",
     "package": "rollup -c",
-    "build": "npm run transpile && npm run package",
+    "minify": "uglifyjs dist/bundles/angular-rules-engine.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/angular-rules-engine.umd.min.js",
+    "build": "npm run transpile && npm run package && npm run minify",
     "start": "node dist/start",
     "lint": "tslint \"src/app/**/*.ts\""
   },
   "private": false,
   "devDependencies": {
     "@angular/cli": "^1.5.0",
+    "@angular/common": "^5.0.1",
     "@angular/compiler": "^5.0.0",
     "@angular/compiler-cli": "^5.0.1",
     "@angular/core": "^5.0.1",
@@ -24,7 +26,8 @@
     "tslint": "3.11.0",
     "typescript": "^2.4.2",
     "typescript-dotnet-commonjs": "3.2.4",
-    "typings": "1.3.1"
+    "typings": "1.3.1",
+    "uglify-js": "^3.1.10"
   },
   "repository": {
     "type": "git",

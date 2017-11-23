@@ -1,30 +1,48 @@
 {
+	/*
+	* Distribute the packages with esm and also provide 
+	* ES5 UMD (Universal Module Definition) bundle.
+	*
+	* Requires use of another bunder tool to create the 
+	* UMD ES5 Bundle; consider using [rollup]. 
+	*/
 	"compilerOptions": {
 		"baseUrl": "",
 		"declaration": true, /* generate type definition files; */
+		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"inlineSources": true,
 		"lib": [
 			"es2015",
 			"dom"
 		],
+		/* esm - contains an ES5 version that uses ES2015 modules */
 		"module": "es2015",
 		"moduleResolution": "node",
 		"noImplicitAny": false, /* true to support Angular 4.0 */
-		"outDir": "dist",
+		"outDir": "dist", /* name of the output directory/folder; */
+		/*
+		"paths": {
+			"@angular/core": ["node_modules/@angular/core"],
+			"rxjs/*": ["node_modules/rxjs/*"]
+		},
+		*/
 		"paths": {},
-		"rootDir": "src/app",
-		"skipLibCheck": true,
-		"sourceMap": true,
+		"rootDir": "src/app", /* location of source files */
+		"skipLibCheck": true, /* avoid being blocked by (harmless) errors in the librairies you use*/
+		"sourceMap": true, /* required for debugging */
 		"strictNullChecks": true, /* support for Angular 4.1 */
-		"stripInternal": true,
+		"stripInternal": true, /* avoid useless declarations for internal APIs */
+		/* esm - contains an ES5 version that uses ES2015 modules */
 		"target": "es5"
 	},
 	"files": [
-		"./src/app/index.ts"
+		/* "./src/app/index.ts", */
+		"./src/app/angular-rules-engine.module.ts"
 	],
 	"angularCompilerOptions": {
-		"strictMetadataEmit": true,
+		"skipTemplateCodegen": true,
+		"strictMetadataEmit": true, /* required for AOT */
 		"genDir": "aot-dist"
 	}
 }

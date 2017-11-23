@@ -1,3 +1,4 @@
+export * from './angular-rules-engine.module';
 export * from './rules/RuleResult';
 export * from './rules/IRuleComponent';
 export * from './rules/RulePolicy';
