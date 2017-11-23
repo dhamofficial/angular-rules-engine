@@ -37,8 +37,8 @@
 		"target": "es5"
 	},
 	"files": [
-		/* "./src/app/index.ts", */
-		"./src/app/angular-rules-engine.module.ts"
+		"./src/app/index.ts"
+		/* "./src/app/angular-rules-engine.module.ts" */
 	],
 	"angularCompilerOptions": {
 		"skipTemplateCodegen": true,
