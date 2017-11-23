@@ -16,10 +16,11 @@ export * from './rules/AreEqual';
 export * from './rules/AreNotEqual';
 export * from './rules/StringIsNotNullEmptyRange';
 export * from './rules/Severity';
+
 export * from './service/ServiceContext';
 export * from './service/ServiceMessage';
 export * from './service/MessageType';
+
 export * from './validation/IValidationContext';
 export * from './validation/ValidationContext';
 export * from './validation/ValidationContextState';
-
